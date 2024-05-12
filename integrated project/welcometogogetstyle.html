@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f2f2f2;
+            overflow: hidden; /* Hide vertical scrollbar */
+            background-color:rgb(122, 160, 231);
+        }
+        .welcome-text {
+            text-align: center;
+            animation: slideUp 1.5s ease-out;
+        }
+
+        .logo{
+            border-radius: 5px;
+            box-shadow: 3px 3px 3px 3px;
+        }
+        @keyframes slideUp {
+            0% {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .logo {
+            animation: float 3s ease-in-out infinite alternate;
+            width: 100px; /* Adjust logo size as needed */
+        }
+        @keyframes float {
+            0% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0);
+            }
+        }
+        .welcome-text h1 {
+            font-size: 3rem;
+            color: #333;
+            margin: 20px 0;
+            animation: colorChange 3s infinite alternate;
+        }
+        @keyframes colorChange {
+            0% {
+                color: #333;
+            }
+            50% {
+                color:orangered; /* Adjust to your brand color */
+            }
+            100% {
+                color: #333;
+            }
+        }
+        .welcome-text p {
+            font-size: 1.5rem;
+            color: #666;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        button{
+            padding: 10px;
+            border: 3px solid black;
+            border-radius: 5px;
+            height: 60px;
+            width: 350px;
+            font-size: 20px;
+            /* background-color: #EBFAB4; */
+        }
+        button:hover{
+            transition: 1s;
+            background-color: #F8CCA7;
+        }
+
+        button a{
+            text-decoration: none;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-text">
+            <img src="O ET.png" alt="GoGetStyle Logo" class="logo">
+            <h1>Welcome to GoGetStyle</h1>
+            <p>Your destination for stylish fashion!</p>
+            <button onclick="window.open`signup.html`"><a href="signup.html">Explore our website</a></button>
+        </div>
+    </div>
+</body>
+</html>
